@@ -80,25 +80,25 @@ class StableDiffusionProcessingImg2Img(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'init_images': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
+            'init_images': ([bool, date, datetime, dict, float, int, list, str, none_type], none_type,),  # noqa: E501
             'resize_mode': (int,),  # noqa: E501
             'denoising_strength': (float,),  # noqa: E501
-            'image_cfg_scale': (float,),  # noqa: E501
+            'image_cfg_scale': (float, none_type,),  # noqa: E501
             'mask': (str, none_type,),  # noqa: E501
             'mask_blur': (int,),  # noqa: E501
             'inpainting_fill': (int,),  # noqa: E501
             'inpaint_full_res': (bool,),  # noqa: E501
             'inpaint_full_res_padding': (int,),  # noqa: E501
             'inpainting_mask_invert': (int,),  # noqa: E501
-            'initial_noise_multiplier': (float,),  # noqa: E501
+            'initial_noise_multiplier': (float, none_type,),  # noqa: E501
             'prompt': (str,),  # noqa: E501
-            'styles': ([str],),  # noqa: E501
+            'styles': ([str], none_type,),  # noqa: E501
             'seed': (int,),  # noqa: E501
             'subseed': (int,),  # noqa: E501
             'subseed_strength': (float,),  # noqa: E501
             'seed_resize_from_h': (int,),  # noqa: E501
             'seed_resize_from_w': (int,),  # noqa: E501
-            'sampler_name': (str,),  # noqa: E501
+            'sampler_name': (str, none_type,),  # noqa: E501
             'batch_size': (int,),  # noqa: E501
             'n_iter': (int,),  # noqa: E501
             'steps': (int,),  # noqa: E501
@@ -109,18 +109,18 @@ class StableDiffusionProcessingImg2Img(ModelNormal):
             'tiling': (bool,),  # noqa: E501
             'do_not_save_samples': (bool,),  # noqa: E501
             'do_not_save_grid': (bool,),  # noqa: E501
-            'negative_prompt': (str,),  # noqa: E501
-            'eta': (float,),  # noqa: E501
+            'negative_prompt': (str, none_type,),  # noqa: E501
+            'eta': (float, none_type,),  # noqa: E501
             's_churn': (float,),  # noqa: E501
-            's_tmax': (float,),  # noqa: E501
+            's_tmax': (float, none_type,),  # noqa: E501
             's_tmin': (float,),  # noqa: E501
             's_noise': (float,),  # noqa: E501
-            'override_settings': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'override_settings': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'override_settings_restore_afterwards': (bool,),  # noqa: E501
-            'script_args': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'sampler_index': (str,),  # noqa: E501
+            'script_args': ([bool, date, datetime, dict, float, int, list, str, none_type], none_type,),  # noqa: E501
+            'sampler_index': (str, none_type,),  # noqa: E501
             'include_init_images': (bool,),  # noqa: E501
-            'script_name': (str,),  # noqa: E501
+            'script_name': (str, none_type,),  # noqa: E501
             'send_images': (bool,),  # noqa: E501
             'save_images': (bool,),  # noqa: E501
             'alwayson_scripts': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
